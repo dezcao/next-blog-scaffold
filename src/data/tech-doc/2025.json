@@ -1,3 +1,9 @@
 [
-  { "title": "TypeScript Tips", "year": "2025", "month": "01", "slug": "typescript", "componentName": "TypescriptReview" }
+  {
+    "title": "TypeScript Tips",
+    "year": "2025",
+    "month": "01",
+    "key": "typescript",
+    "componentName": "TypescriptReview"
+  }
 ]

@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination";
 
 // 공통적인 목록화면을 구성
-export default function ClentList({ jsonDocuments, componentRoot }) {
+export default function ClentList({ jsonDocuments, slug }) {
   const router = useRouter();
   const searchParams = useSearchParams(); // Client Components에서만 동작함.
 
@@ -18,10 +18,7 @@ export default function ClentList({ jsonDocuments, componentRoot }) {
 
   const itemsPerPage = 3; // 페이지당 글의 수
   const totalPages = Math.ceil(jsonDocuments.length / itemsPerPage); // 전체 페이지 수 계산
-  const currentJsonDocuments = jsonDocuments.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  ); // 현재페이지의 목록에 표시될 json의 데이터 결정
+  const currentJsonDocuments = jsonDocuments.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); // 현재페이지의 목록에 표시될 json의 데이터 결정
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams?.toString()); // 쿼리스트링을 문자열로 만들고 URLSearchParams 객체로 만듬.
@@ -32,18 +29,12 @@ export default function ClentList({ jsonDocuments, componentRoot }) {
 
   return (
     <div className="space-y-6">
-      {/* 목록을 구성 : doc.slug는 json 파일에 적혀있는 slug로 url slug와 다른 값임 */}
+      {/* 목록을 구성 */}
       <ul className="space-y-4">
         {currentJsonDocuments.map((doc) => (
-          <li key={doc.slug}>
+          <li key={doc.key}>
             <button
-              onClick={() =>
-                router.push(
-                  `/${componentRoot.toLowerCase()}/${doc.year}/${doc.month}/${
-                    doc.slug
-                  }?componentName=${doc.componentName}&page=${currentPage}`
-                )
-              }
+              onClick={() => router.push(`/${slug.toLowerCase()}/${doc.year}/${doc.month}/${doc.componentName}?page=${currentPage}`)}
               className="text-blue-600 hover:underline"
             >
               {doc.title} ({doc.year}/{doc.month})
@@ -53,11 +44,7 @@ export default function ClentList({ jsonDocuments, componentRoot }) {
       </ul>
 
       {/* Pagination Component */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={(newPage) => setCurrentPage(newPage)}
-      />
+      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={(newPage) => setCurrentPage(newPage)} />
     </div>
   );
 }
