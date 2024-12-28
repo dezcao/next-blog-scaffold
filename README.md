@@ -1,5 +1,7 @@
 ## Getting Started
 
+https://dezcao.github.io/
+
 First, run the development server:
 
 ```bash
