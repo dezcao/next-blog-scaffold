@@ -16,7 +16,7 @@ export default function ClentList({ jsonDocuments, slug }) {
     return pageParam ? parseInt(pageParam, 10) : 1; // 쿼리파라미터 꺼내서 10진수로 변환 혹은 기본값 1.
   });
 
-  const itemsPerPage = 3; // 페이지당 글의 수
+  const itemsPerPage = 10; // 페이지당 글의 수
   const totalPages = Math.ceil(jsonDocuments.length / itemsPerPage); // 전체 페이지 수 계산
   const currentJsonDocuments = jsonDocuments.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); // 현재페이지의 목록에 표시될 json의 데이터 결정
 
