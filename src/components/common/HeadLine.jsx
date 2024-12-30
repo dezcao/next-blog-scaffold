@@ -1,3 +1,3 @@
 export default function HeadLine({ text }) {
-  return <h2 style={{ fontSize: "24px", marginBottom: "20px", marginTop: "20px" }}>{text}</h2>;
+  return <h2 className="text-2xl my-5 text-gray-700 font-bold">{text}</h2>;
 }

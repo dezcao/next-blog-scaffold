@@ -1,15 +1,3 @@
 export default function BigTitle({ text }) {
-  return (
-    <h1
-      style={{
-        fontSize: "36px",
-        fontWeight: "bold",
-        textAlign: "left",
-        margin: "20px 0",
-        color: "#333",
-      }}
-    >
-      {text}
-    </h1>
-  );
+  return <h1 className="text-4xl font-bold text-left my-5 text-gray-800">{text}</h1>;
 }

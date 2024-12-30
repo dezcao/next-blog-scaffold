@@ -58,7 +58,7 @@ export default function Resume() {
           orderer: "이투스에듀",
           rank: " 과장 (중급)",
           tool: "vs code, intelliJ, dataGrip",
-          memo: "https://cheongsol.etoos.com/gate 드디어, 처음부터 참여. nuxt3(12개 서브학원이 1개의 프런트소스), vue3 스캐폴딩 및 공통컴포넌트 작업. excel, image handle, editor등 라이브러리 사용함수 공통화. api 및 설명회 화면 등 구성. 프런트 메인개발자로 어드민 및 학원 홈 화면 모두 서비스까지 성공적으로 마침."
+          memo: "https://cheongsol.etoos.com/gate 드디어, 처음부터 참여. nuxt3(12개 서브학원이 1개의 프런트소스), vue3 스캐폴딩 및 공통컴포넌트 작업. excel, image handle, editor등 라이브러리 사용함수 공통화. api 및 설명회 화면 등 구성. 프런트 메인개발자로 어드민 및 학원 홈 화면 모두 서비스까지 성공적으로 마침.",
         },
       ],
     },
@@ -331,14 +331,14 @@ export default function Resume() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Resume</h1>
+      <h1 className="text-2xl font-bold mb-4 text-gray-700">Resume</h1>
 
       {/* 자격증 섹션 */}
       <div
-        className="p-8 border-2 rounded-lg"
+        className="p-8 border-2 rounded-lg text-gray-700"
         style={{
           backgroundColor: colors.certBackground,
-          borderColor: colors.border
+          borderColor: colors.border,
         }}
       >
         <h1 className="text-2xl font-bold mb-6" style={{ color: colors.accent }}>
@@ -383,10 +383,10 @@ export default function Resume() {
 
       {/* 학력 섹션 */}
       <div
-        className="p-8 border-2 rounded-lg"
+        className="p-8 border-2 rounded-lg text-gray-700"
         style={{
           backgroundColor: colors.certBackground,
-          borderColor: colors.border
+          borderColor: colors.border,
         }}
       >
         <h1 className="text-2xl font-bold mb-6" style={{ color: colors.accent }}>
@@ -431,10 +431,10 @@ export default function Resume() {
 
       {/* 프로젝트 섹션 */}
       <div
-        className="p-8 border-2 rounded-lg"
+        className="p-8 border-2 rounded-lg text-gray-700"
         style={{
           backgroundColor: colors.projectBackground,
-          borderColor: colors.border
+          borderColor: colors.border,
         }}
       >
         <h1 className="text-2xl font-bold mb-6" style={{ color: colors.accent }}>
@@ -443,10 +443,7 @@ export default function Resume() {
         {experience.map((exp, expIndex) => (
           <div key={expIndex} className="mb-8">
             <h2 className="text-xl font-semibold mb-4 flex items-center" style={{ color: colors.border }}>
-              <span
-                className="inline-block w-3 h-3 rounded-full mr-2"
-                style={{ backgroundColor: colors.highlight }}
-              ></span>
+              <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: colors.highlight }}></span>
               {exp.company}
             </h2>
 

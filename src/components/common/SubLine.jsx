@@ -1,8 +1,3 @@
 export default function SubLine({ text }) {
-  return (
-    <h3 style={{ fontSize: "16px", marginTop: "1.5em", marginBottom: "10px" }}>
-      {/* <span style={{ marginRight: "10px", color: "#555" }}>•</span> */}
-      <strong>{text}</strong>
-    </h3>
-  );
+  return <h3 className="text-base mt-6 mb-2 text-gray-700 font-bold">{text}</h3>;
 }

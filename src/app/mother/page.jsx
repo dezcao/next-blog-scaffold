@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 
@@ -14,7 +14,7 @@ const imageData = [
 export default function Mother() {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Mother</h1>
+      <h1 className="text-2xl text-gray-700 font-bold mb-4">Mother</h1>
       <div className="masonry-grid">
         {imageData.map((image, index) => (
           <div key={index} className="masonry-item">
@@ -22,7 +22,7 @@ export default function Mother() {
               <img src={image.src} alt={image.title} className="masonry-image" />
             </div>
             <div className="masonry-content">
-              <p>{image.title}</p>
+              <p className="text-gray-700">{image.title}</p>
             </div>
           </div>
         ))}
