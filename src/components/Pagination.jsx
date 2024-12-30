@@ -42,11 +42,9 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
           type="text"
           value={inputPage}
           onChange={(e) => handleInputChange(e.target.value)}
-          className="w-12 px-2 py-1 text-center border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-12 px-2 py-1 text-center text-gray-600 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
         />
-        <span className="text-sm font-medium text-gray-600">
-          of {totalPages}
-        </span>
+        <span className="text-sm font-medium text-gray-600">of {totalPages}</span>
       </div>
 
       {/* Next Button */}
