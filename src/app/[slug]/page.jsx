@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 // JSON 데이터를 로드하는 함수 url의 slug에 의존하여 다른 json 읽음.
 async function getData(slug) {
-  // mod.default : json이 모드로 임포트될 때, json이 내보내어 진다.
+  // mod.default : json이 모드로 임포트될 때, json이 내보내진다.
   const [res2025, res2024] = await Promise.all([
     import(`@/data/${slug}/2025.json`).then((mod) => mod.default),
     import(`@/data/${slug}/2024.json`).then((mod) => mod.default),
