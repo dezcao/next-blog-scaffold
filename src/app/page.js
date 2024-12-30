@@ -16,7 +16,7 @@ function Breadcrumbs() {
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/image/main-background.jpg')" }}>
+    <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/image/main-background.webp')" }}>
       {/* 반투명 오버레이 */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
