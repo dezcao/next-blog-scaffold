@@ -57,7 +57,7 @@ export default async function DynamicComponentPage({ params, searchParams }) {
   });
 
   return (
-    <div className="p-8">
+    <div>
       <Suspense fallback={<div>Loading...</div>}>
         <BackToList />
         <DynamicComponent />

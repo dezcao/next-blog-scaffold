@@ -1,4 +1,5 @@
 "use client";
+import BigTitle from "@/components/common/BigTitle";
 
 export default function Resume() {
   const colors = {
@@ -331,8 +332,7 @@ export default function Resume() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4 text-gray-700">Resume</h1>
-
+      <BigTitle text="Resume"></BigTitle>
       {/* 자격증 섹션 */}
       <div
         className="p-8 border-2 rounded-lg text-gray-700"

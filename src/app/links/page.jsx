@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BigTitle from "@/components/common/BigTitle";
 
 export default async function resume() {
   const links = [
@@ -101,7 +102,7 @@ export default async function resume() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Links</h1>
+      <BigTitle text="Links"></BigTitle>
       {links.map(({ name, address, memo }, index) => (
         <div key={index} className="mb-2">
           <Link href={`${address}`} className="text-blue-600 hover:underline">

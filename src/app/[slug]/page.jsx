@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import BigTitle from "@/components/common/BigTitle";
 import ClientList from "@/components/ClientList";
 
 // 가능한 page 및 component `slug` 값
@@ -23,11 +24,13 @@ async function getData(slug) {
 // 동적 경로 페이지
 export default async function SlugPage({ params }) {
   const { slug } = await params;
+  const listTile = slug.replace(/^./, (match) => match.toUpperCase());
   const clientListProps = await getData(slug);
 
   return (
-    <div className="p-8">
+    <div>
       <Suspense fallback={<div>Loading...</div>}>
+        <BigTitle text={listTile}></BigTitle>
         <ClientList {...clientListProps} />
       </Suspense>
     </div>

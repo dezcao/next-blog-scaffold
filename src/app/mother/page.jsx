@@ -1,20 +1,21 @@
 "use client";
 
 import React from "react";
+import BigTitle from "@/components/common/BigTitle";
 
 const imageData = [
-  { src: "/image/mother/동두천내방.jpg", title: "동두천 내방" },
-  { src: "/image/mother/모자사드리러감.jpg", title: "모자 사드리러" },
-  { src: "/image/mother/부천성모병원.jpg", title: "부천성모병원" },
-  { src: "/image/mother/부천성모병원복도.jpg", title: "부천성모병원복도" },
-  { src: "/image/mother/세브란스병원카드.jpg", title: "세브란스병원카드" },
-  { src: "/image/mother/어머니상처붕대.jpg", title: "어머니 상처에 봉대" },
+  { src: "/image/mother/myroom.jpg", title: "동두천 내방" },
+  { src: "/image/mother/hat.jpg", title: "모자 사드리러" },
+  { src: "/image/mother/hospital.jpg", title: "부천성모병원" },
+  { src: "/image/mother/hospital2.jpg", title: "부천성모병원복도" },
+  { src: "/image/mother/card.jpg", title: "세브란스병원카드" },
+  { src: "/image/mother/guz.jpg", title: "어머니 상처에 봉대" },
 ];
 
 export default function Mother() {
   return (
     <div>
-      <h1 className="text-2xl text-gray-700 font-bold mb-4">Mother</h1>
+      <BigTitle text="Mother"></BigTitle>
       <div className="masonry-grid">
         {imageData.map((image, index) => (
           <div key={index} className="masonry-item">
@@ -32,7 +33,7 @@ export default function Mother() {
         .masonry-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 16px; /* 카드 간 간격 */
+          gap: 16px;
         }
 
         .masonry-item {
@@ -60,7 +61,7 @@ export default function Mother() {
           position: absolute;
           bottom: 0;
           width: 100%;
-          background-color: rgba(255, 255, 255, 0.9); /* 약간의 배경색 */
+          background-color: rgba(255, 255, 255, 0.9);
           padding: 10px;
           text-align: center;
           font-weight: bold;
