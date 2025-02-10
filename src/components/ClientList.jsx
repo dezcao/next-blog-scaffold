@@ -28,14 +28,13 @@ export default function ClentList({ jsonDocuments, slug }) {
   }, [currentPage, searchParams, router]); // 현재페이지, 쿼리파라미터, 라우터를 지켜본다.
 
   return (
-    <div className="space-y-6">
-      {/* 목록을 구성 */}
-      <ul className="space-y-4">
+    <div className="space-y-6 overflow-x-hidden">
+      <ul className="space-y-4 text-left flex flex-col items-start break-words sm:break-all">
         {currentJsonDocuments.map((doc) => (
           <li key={doc.key}>
             <button
               onClick={() => router.push(`/${slug.toLowerCase()}/${doc.year}/${doc.month}/${doc.componentName}?page=${currentPage}`)}
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 hover:underline text-left break-all whitespace-normal"
             >
               {doc.title} ({doc.year}/{doc.month})
             </button>
@@ -43,7 +42,6 @@ export default function ClentList({ jsonDocuments, slug }) {
         ))}
       </ul>
 
-      {/* Pagination Component */}
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={(newPage) => setCurrentPage(newPage)} />
     </div>
   );

@@ -3,14 +3,7 @@
 import React from "react";
 import BigTitle from "@/components/common/BigTitle";
 
-const imageData = [
-  { src: "/image/mother/myroom.jpg", title: "동두천 내방" },
-  { src: "/image/mother/hat.jpg", title: "모자 사드리러" },
-  { src: "/image/mother/hospital.jpg", title: "부천성모병원" },
-  { src: "/image/mother/hospital2.jpg", title: "부천성모병원복도" },
-  { src: "/image/mother/card.jpg", title: "세브란스병원카드" },
-  { src: "/image/mother/guz.jpg", title: "어머니 상처에 봉대" },
-];
+const imageData = [{ src: "/image/mother/myroom.jpg", title: "mother" }];
 
 export default function Mother() {
   return (
